@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="start()">Start</button>
+  <button onclick="stop()">Stop</button>
+
+  <p id="text">---</p>
+  <script>
+    let id;
+    function start(){
+      id = setTimeout(changeText,5000);
+    }
+
+    function changeText(){
+      const p = document.getElementById("text");
+      p.textContent = "FIN";
+    }
+
+    function stop(){
+      clearTimeout(id);
+    }
+  </script>
+</body>
+</html>
